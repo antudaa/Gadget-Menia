@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Adding Font Awesome -->
+    <script src="https://kit.fontawesome.com/809cc2b82b.js" crossorigin="anonymous"></script>
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="76x76" href="images/favicons/apple-touch-icon-76x76.png">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+
+    <link rel=icon href=https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15/svgs/solid/mobile.svg>
+
+
+
+    <title>Phone Hunter</title>
+</head>
+
+<body>
+    <header class="container">
+        <h1 class="text-center my-5 text-primary">Welcome to our Shop... </h1>
+        <div class="mb-3  text-center">
+            <label for="exampleFormControlInput1" class="form-label h3">Search For Your Phone...</label>
+            <input id="input-field" type="text" class="form-control text-center my-3" id="exampleFormControlInput1"
+                placeholder="Search for your desire phone....">
+            <button id="search-btn" class="btn btn-primary py-2 px-4 mt-3 mb-5">Search</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <section>
+            <div>
+                <div id="phone-container" class="row row-cols-1 row-cols-md-4 g-4 mb-5">
+
+
+                </div>
+            </div>
+
+            <div id="modal">
+
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel"></h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="d-flex">
+                                    <h5>Display : </h5>
+                                    <p id="phone-display"> </p>
+                                </div>
+                                <div class="d-flex">
+                                    <h5>Processor : </h5>
+                                    <p id="phone-chipset"> </p>
+                                </div>
+                                <div class="d-flex">
+                                    <h5>Storage : </h5>
+                                    <p id="phone-storage"> </p>
+                                </div>
+                                <div class="d-flex">
+                                    <h5>Release Date : </h5>
+                                    <p id="phone-releasedate"> </p>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Displaying Error Message If Phone Not Fond -->
+            <div id="warning-msg" class="text-center my-5 d-none">
+                <h4 class="text-warning">No result fond ....</h4>
+            </div>
+
+            <!-- Next Page Section  -->
+            <div id="go-next" class="text-center my-5 d-none">
+                <button class="btn btn-primary">Next>></button>
+            </div>
+        </section>
+
+        <!-- Loading Section  -->
+        <section>
+            <div id="loading" class="d-flex justify-content-center d-none">
+                <div class="spinner-border text-info" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Bootstrap Script File -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+
+    <!-- App Script File -->
+    <script src="app.js"></script>
+</body>
+
+</html>
